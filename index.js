@@ -32,9 +32,9 @@ function getAllMovieTitles(movies) {
   let arr = []
   for (let i in movies){
     arr.push(movies[i].title)
-  }
+   }
     return arr
-}
+  }
 
 /**
  * getHighestMetascore()
@@ -47,9 +47,15 @@ function getAllMovieTitles(movies) {
  *  getHighestMetascore(movies);
  *  //> 96
  */
-function getHighestMetascore() {
+function getHighestMetascore(movies) {
+  let score = 0
+  for (let i in movies){
+    if(score < movies[i].metascore){
+      score = Number(movies[i].metascore)
+    }
+  }
+  return score
 
-  
 }
 
 /**
